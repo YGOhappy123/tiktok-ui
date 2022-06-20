@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 .wrapper {
     width: 100%;
     height: var(--dl-header-height);
@@ -7,7 +9,92 @@
 }
 
 .inner {
-    height: 100%;
     width: var(--dl-content-width);
-    background: #ccc;
+    height: 100%;
+    padding: 0 24px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+}
+
+.search-box {
+    --search-height: 46px;
+    --search-radius: 92px;
+    --search-btn-width: 52px;
+
+    position: relative;
+    width: 361px;
+    height: var(--search-height);
+    padding: 0 16px;
+    border: 1.5px solid transparent;
+    border-radius: var(--search-radius);
+    background-color: rgba(22, 24, 35, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+
+    input {
+        flex: 1;
+        height: 100%;
+        padding: 12px 0;
+        background-color: transparent;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.6rem;
+        color: var(--input-color);
+        caret-color: var(--primary-color);
+
+        &:not(:placeholder-shown) ~ .search-btn {
+            color: rgba(22, 24, 35, 0.75) !important;
+        }
+    }
+
+    .clear-btn,
+    .loading-icon {
+        position: absolute;
+        top: 50%;
+        right: var(--search-btn-width);
+        transform: translateY(-50%);
+        font-size: 1.6rem;
+        color: rgba(22, 24, 35, 0.34);
+        margin: 0 12px;
+    }
+
+    .search-btn {
+        width: var(--search-btn-width);
+        height: 100%;
+        padding: 11px 16px 11px 12px;
+        margin-right: -16px;
+        border-radius: 0 var(--search-radius) var(--search-radius) 0;
+        color: rgba(22, 24, 35, 0.34);
+        font-size: 1.8rem;
+
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.03);
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: rgba(22, 24, 35, 0.06);
+        }
+
+        &::before {
+            --spacing: 9px;
+
+            content: '';
+            position: absolute;
+            right: var(--search-btn-width);
+            top: var(--spacing);
+            height: calc(var(--search-height) - 2 * var(--spacing));
+            width: 1px;
+            background-color: rgba(22, 24, 35, 0.12);
+        }
+    }
 }

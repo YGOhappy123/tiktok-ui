@@ -1,10 +1,11 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400;600;700&display=swap');
 
 :root {
     //color code
     --primary-color: #fe2c55;
-    --black-color: #161823;
+    --text-color: #161823;
+    --input-color: #000;
     --gray-color_trans: rgba(22, 24, 35, 0.5);
 
     //default layout
@@ -31,4 +32,16 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+}
+
+button,
+input,
+[tabindex] {
+    border: none;
+    outline: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }

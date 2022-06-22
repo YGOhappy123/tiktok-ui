@@ -1,0 +1,102 @@
+.wrapper {
+    min-width: 100px;
+    min-height: 36px;
+    padding: 6px 8px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+    & + .wrapper {
+        margin-left: 16px;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.7;
+    }
+}
+
+// Button types
+.primary {
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--primary-color);
+
+    &:hover {
+        background: var(--hover-primary-color);
+    }
+}
+
+.outline {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.rounded {
+    min-width: 90px;
+    height: 32px;
+    padding: 0 8px;
+    border-color: rgba(22, 24, 35, 0.12);
+    border-radius: 50px;
+    color: rgba(22, 24, 35, 0.75);
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    &:hover {
+        background-color: var(--hover-bg-color);
+    }
+}
+
+.text {
+    padding: 0 16px;
+    border-color: rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    color: var(--text-color);
+
+    &:hover {
+        background-color: var(--hover-bg-color);
+    }
+}
+
+// Button sizes
+.s {
+    min-width: 88px;
+    min-height: 28px;
+    padding: 0 10px;
+}
+
+.l {
+    min-width: 168px;
+    min-height: 48px;
+    padding: 6px 8px;
+    font-size: 1.8rem;
+}
+
+// Icons on button
+.icon {
+    font-size: 1.7rem;
+}
+
+.icon + span,
+span + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    display: block;
+    width: 22px;
+    text-align: center;
+}

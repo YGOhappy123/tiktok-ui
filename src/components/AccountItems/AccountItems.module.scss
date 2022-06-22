@@ -1,0 +1,41 @@
+.wrapper {
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+
+    &:hover {
+        background-color: var(--hover-bg-color);
+    }
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+}
+
+.username {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    .icon {
+        margin-left: 8px;
+        font-size: 1.4rem;
+        color: var(--username-check-icon-color);
+    }
+}
+
+.name {
+    font-size: 1.4rem;
+    color: var(--gray-color_trans);
+}

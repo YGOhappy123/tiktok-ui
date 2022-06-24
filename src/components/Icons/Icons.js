@@ -1,7 +1,7 @@
-export function MessageIcon({ width = '2.6rem', height = '2.6rem', classes }) {
+export function MessageIcon({ width = '2.6rem', height = '2.6rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
@@ -17,10 +17,10 @@ export function MessageIcon({ width = '2.6rem', height = '2.6rem', classes }) {
     )
 }
 
-export function InboxIcon({ width = '3.6rem', height = '3.6rem', classes }) {
+export function InboxIcon({ width = '3.6rem', height = '3.6rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 32 32"
@@ -36,10 +36,10 @@ export function InboxIcon({ width = '3.6rem', height = '3.6rem', classes }) {
     )
 }
 
-export function UploadIcon({ width = '2rem', height = '2rem', classes }) {
+export function UploadIcon({ width = '2rem', height = '2rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 16 16"
@@ -55,14 +55,14 @@ export function UploadIcon({ width = '2rem', height = '2rem', classes }) {
     )
 }
 
-export function SearchIcon({ width = '2.4rem', height = '2.4rem', classes }) {
+export function SearchIcon({ width = '2.4rem', height = '2.4rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
-            fill="rgba(22, 24, 35, 0.34)"
+            fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
         >
             <path
@@ -74,10 +74,10 @@ export function SearchIcon({ width = '2.4rem', height = '2.4rem', classes }) {
     )
 }
 
-export function CloseIcon({ width = '1.6rem', height = '1.6rem', classes }) {
+export function CloseIcon({ width = '1.6rem', height = '1.6rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
@@ -93,10 +93,29 @@ export function CloseIcon({ width = '1.6rem', height = '1.6rem', classes }) {
     )
 }
 
-export function UserIcon({ width = '2rem', height = '2rem', classes }) {
+export function LoadingIcon({ width = '1.6rem', height = '1.6rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
+            width={width}
+            height={height}
+            viewBox="0 0 48 48"
+            fill="rgba(22, 24, 35, 0.34)"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M24 12.5C17.6487 12.5 12.5 17.6487 12.5 24C12.5 30.3513 17.6487 35.5 24 35.5C26.8172 35.5 29.3919 34.4902 31.3919 32.8101C32.4491 31.9219 34.026 32.059 34.9142 33.1161C35.8023 34.1733 35.6653 35.7503 34.6081 36.6384C31.741 39.0471 28.0369 40.5 24 40.5C14.8873 40.5 7.5 33.1127 7.5 24C7.5 14.8873 14.8873 7.5 24 7.5C33.1127 7.5 40.5 14.8873 40.5 24C40.5 25.3807 39.3807 26.5 38 26.5C36.6193 26.5 35.5 25.3807 35.5 24C35.5 17.6487 30.3513 12.5 24 12.5Z"
+            ></path>
+        </svg>
+    )
+}
+
+export function UserIcon({ width = '2rem', height = '2rem', className }) {
+    return (
+        <svg
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
@@ -112,10 +131,10 @@ export function UserIcon({ width = '2rem', height = '2rem', classes }) {
     )
 }
 
-export function CoinIcon({ width = '2rem', height = '2rem', classes }) {
+export function CoinIcon({ width = '2rem', height = '2rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 20 20"
@@ -136,10 +155,10 @@ export function CoinIcon({ width = '2rem', height = '2rem', classes }) {
     )
 }
 
-export function SettingIcon({ width = '2rem', height = '2rem', classes }) {
+export function SettingIcon({ width = '2rem', height = '2rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
@@ -155,10 +174,10 @@ export function SettingIcon({ width = '2rem', height = '2rem', classes }) {
     )
 }
 
-export function LanguageIcon({ width = '2rem', height = '2rem', classes }) {
+export function LanguageIcon({ width = '2rem', height = '2rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
@@ -174,10 +193,10 @@ export function LanguageIcon({ width = '2rem', height = '2rem', classes }) {
     )
 }
 
-export function HelpIcon({ width = '2rem', height = '2rem', classes }) {
+export function HelpIcon({ width = '2rem', height = '2rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
@@ -193,10 +212,10 @@ export function HelpIcon({ width = '2rem', height = '2rem', classes }) {
     )
 }
 
-export function KeyboardIcon({ width = '2rem', height = '2rem', classes }) {
+export function KeyboardIcon({ width = '2rem', height = '2rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
@@ -212,10 +231,10 @@ export function KeyboardIcon({ width = '2rem', height = '2rem', classes }) {
     )
 }
 
-export function LogOutIcon({ width = '2rem', height = '2rem', classes }) {
+export function LogOutIcon({ width = '2rem', height = '2rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
@@ -231,10 +250,10 @@ export function LogOutIcon({ width = '2rem', height = '2rem', classes }) {
     )
 }
 
-export function MoreIcon({ width = '2rem', height = '2rem', classes }) {
+export function MoreIcon({ width = '2rem', height = '2rem', className }) {
     return (
         <svg
-            className={classes}
+            className={className}
             width={width}
             height={height}
             viewBox="0 0 48 48"
@@ -245,6 +264,27 @@ export function MoreIcon({ width = '2rem', height = '2rem', classes }) {
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M24 4C26.2091 4 28 5.79086 28 8C28 10.2091 26.2091 12 24 12C21.7909 12 20 10.2091 20 8C20 5.79086 21.7909 4 24 4ZM24 20C26.2091 20 28 21.7909 28 24C28 26.2091 26.2091 28 24 28C21.7909 28 20 26.2091 20 24C20 21.7909 21.7909 20 24 20ZM24 36C26.2091 36 28 37.7909 28 40C28 42.2091 26.2091 44 24 44C21.7909 44 20 42.2091 20 40C20 37.7909 21.7909 36 24 36Z"
+            ></path>
+        </svg>
+    )
+}
+
+export function UserTickIcon({ width = '1.4rem', height = '1.4rem', className }) {
+    return (
+        <svg
+            className={className}
+            width={width}
+            height={height}
+            viewBox="0 0 48 48"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <circle cx="24" cy="24" r="24" fill="inherit"></circle>
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M37.1213 15.8787C38.2929 17.0503 38.2929 18.9497 37.1213 20.1213L23.6213 33.6213C22.4497 34.7929 20.5503 34.7929 19.3787 33.6213L10.8787 25.1213C9.70711 23.9497 9.70711 22.0503 10.8787 20.8787C12.0503 19.7071 13.9497 19.7071 15.1213 20.8787L21.5 27.2574L32.8787 15.8787C34.0503 14.7071 35.9497 14.7071 37.1213 15.8787Z"
+                fill="white"
             ></path>
         </svg>
     )

@@ -1,15 +1,8 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import classNames from 'classnames/bind'
 import Tooltip from '@tippyjs/react'
-import Tippy from '@tippyjs/react/headless'
-import 'tippy.js/dist/tippy.css'
 
-import { Wrapper as PopperWrapper } from '~/components/Popper'
 import {
-    CloseIcon,
     CoinIcon,
     HelpIcon,
     InboxIcon,
@@ -18,13 +11,12 @@ import {
     LogOutIcon,
     MessageIcon,
     MoreIcon,
-    SearchIcon,
     SettingIcon,
     UploadIcon,
     UserIcon
 } from '~/components/Icons'
 import PopperMenu from '~/components/Popper/PopperMenu'
-import AccountItems from '~/components/AccountItems'
+import SearchBox from '~/components/Layouts/SharedComponents/SearchBox'
 import Image from '~/components/Image'
 import Button from '~/components/Button'
 import styles from './Header.module.scss'
@@ -37,6 +29,7 @@ const MENU_ITEMS = [
         title: 'English',
         children: {
             title: 'Language',
+            styles: { fontFamily: 'SofiaPro', fontWeight: 400 },
             data: [
                 {
                     code: 'en',
@@ -47,8 +40,24 @@ const MENU_ITEMS = [
                     title: 'Tiếng Việt'
                 },
                 {
-                    code: 'jp',
+                    code: 'ja',
                     title: '日本語（日本）'
+                },
+                {
+                    code: 'es',
+                    title: 'Español'
+                },
+                {
+                    code: 'ko',
+                    title: '한국어 (대한민국)'
+                },
+                {
+                    code: 'th',
+                    title: 'ไทย (ไทย)'
+                },
+                {
+                    code: 'tr',
+                    title: 'Türkçe (Türkiye)'
                 }
             ]
         }
@@ -90,11 +99,9 @@ const USER_MENU = [
 ]
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([])
-
     function handleChange(item) {}
 
-    let isUserLoggedIn = false
+    let isUserLoggedIn = true
 
     return (
         <div className={cx('wrapper')}>
@@ -105,32 +112,7 @@ function Header() {
                 </Link>
 
                 {/* Search box */}
-                <Tippy
-                    interactive
-                    // visible={searchResult.length > 0}
-                    placement="bottom-start"
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
-                                <h4 className={cx('search-label')}>Accounts</h4>
-                                <AccountItems />
-                                <AccountItems />
-                                <AccountItems />
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search-box')}>
-                        <input type="text" placeholder="Search accounts and videos" spellCheck="false" />
-                        <button className={cx('clear-btn')}>
-                            <CloseIcon />
-                        </button>
-                        {/* <FontAwesomeIcon icon={faSpinner} className={cx('loading-icon')} /> */}
-                        <button className={cx('search-btn')}>
-                            <SearchIcon />
-                        </button>
-                    </div>
-                </Tippy>
+                <SearchBox />
 
                 {/* Actions */}
                 <div className={cx('actions')}>

@@ -15,6 +15,7 @@ function Button({
     leftIcon,
     rightIcon,
     className,
+    styles,
     ...otherProps
 }) {
     let CompElement = 'button'
@@ -52,7 +53,7 @@ function Button({
     return (
         <CompElement className={classes} {...props}>
             {leftIcon && displayIcon(leftIcon)}
-            <span>{children}</span>
+            <span style={styles && styles}>{children}</span>
             {rightIcon && displayIcon(rightIcon)}
         </CompElement>
     )

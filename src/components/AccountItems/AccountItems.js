@@ -1,22 +1,22 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+import { UserTickIcon } from '~/components/Icons'
+import Image from '~/components/Image'
 import classNames from 'classnames/bind'
 import styles from './AccountItems.module.scss'
 
 const cx = classNames.bind(styles)
 
-function AccountItems() {
+function AccountItems({ data }) {
     return (
-        <div className={cx('wrapper')}>
-            <img src="https://i.9mobi.vn/cf/Images/huy/2021/12/6/anh-gai-xinh-3.jpg" alt="" className={cx('avatar')} />
+        <a href={`/@${data.nickname}`} className={cx('wrapper')}>
+            <Image src={data.avatar} alt={data.full_name} className={cx('avatar')} />
             <div className={cx('info')}>
                 <h4 className={cx('username')}>
-                    <span>huyha2105</span>
-                    <FontAwesomeIcon icon={faCircleCheck} className={cx('icon')} />
+                    <span>{data.nickname}</span>
+                    {data.tick && <UserTickIcon className={cx('icon')} />}
                 </h4>
-                <p className={cx('name')}>Hà Gia Huy 159</p>
+                <p className={cx('name')}>{data.full_name}</p>
             </div>
-        </div>
+        </a>
     )
 }
 

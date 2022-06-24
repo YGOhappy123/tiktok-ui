@@ -21,6 +21,7 @@ function PopperMenu({ children, items = [], onChange = () => {} }) {
                 <MenuItem
                     key={index}
                     data={item}
+                    styles={currentMenu.styles}
                     onClick={() => {
                         if (isParent) {
                             setHistory((prev) => [...prev, item.children])
@@ -36,9 +37,11 @@ function PopperMenu({ children, items = [], onChange = () => {} }) {
     return (
         <Tippy
             interactive
+            hideOnClick={false}
             placement="bottom-end"
             delay={[0, 700]}
             offset={[10, 10]}
+            animation={false}
             render={(attrs) => (
                 <div className={cx('more-menu')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-popper')}>
@@ -50,7 +53,7 @@ function PopperMenu({ children, items = [], onChange = () => {} }) {
                                 }}
                             />
                         )}
-                        {renderItems()}
+                        <span>{renderItems()}</span>
                     </PopperWrapper>
                 </div>
             )}

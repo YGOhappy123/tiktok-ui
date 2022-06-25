@@ -20,7 +20,7 @@
     input {
         flex: 1;
         height: 100%;
-        padding: 12px 0;
+        padding: 12px 40px 12px 0;
         background-color: transparent;
         font-size: 1.6rem;
         color: var(--input-color);
@@ -94,6 +94,12 @@
     font-size: 1.4rem;
     font-weight: 600;
     cursor: default;
+}
+
+.content {
+    display: block;
+    max-height: min((100vh - 96px) - 60px, 734px);
+    overflow-y: auto;
 }
 
 .search-result {

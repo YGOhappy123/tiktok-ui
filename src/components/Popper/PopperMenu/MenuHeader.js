@@ -1,5 +1,5 @@
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { GoBackIcon } from '~/components/Icons'
+import PropTypes from 'prop-types'
 import className from 'classnames/bind'
 import styles from './PopperMenu.module.scss'
 
@@ -9,11 +9,16 @@ function MenuHeader({ title, onBack }) {
     return (
         <div className={cx('header')}>
             <button className={cx('back-btn')} onClick={onBack}>
-                <FontAwesomeIcon icon={faChevronLeft} />
+                <GoBackIcon />
             </button>
             <h4 className={cx('header-title')}>{title}</h4>
         </div>
     )
+}
+
+MenuHeader.propTypes = {
+    title: PropTypes.string.isRequired,
+    onBack: PropTypes.func.isRequired
 }
 
 export default MenuHeader

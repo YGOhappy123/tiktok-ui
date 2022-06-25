@@ -3,9 +3,12 @@
     --search-height: 46px;
     --search-radius: 92px;
 
+    position: sticky;
+    top: 0;
     width: 100%;
     height: var(--dl-header-height);
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    background-color: #fff;
     display: flex;
     justify-content: center;
 }

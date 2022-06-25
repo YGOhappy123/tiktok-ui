@@ -1,7 +1,8 @@
 import { UserTickIcon } from '~/components/Icons'
+import PropTypes from 'prop-types'
 import Image from '~/components/Image'
 import classNames from 'classnames/bind'
-import styles from './AccountItems.module.scss'
+import styles from './AccountItem.module.scss'
 
 const cx = classNames.bind(styles)
 
@@ -18,6 +19,10 @@ function AccountItems({ data }) {
             </div>
         </a>
     )
+}
+
+AccountItems.propTypes = {
+    data: PropTypes.object.isRequired
 }
 
 export default AccountItems

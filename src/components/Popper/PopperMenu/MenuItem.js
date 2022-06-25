@@ -1,6 +1,7 @@
+import Button from '~/components/Button/Button'
+import PropTypes from 'prop-types'
 import className from 'classnames/bind'
 import styles from './PopperMenu.module.scss'
-import Button from '~/components/Button/Button'
 
 const cx = className.bind(styles)
 
@@ -12,6 +13,12 @@ function MenuItem({ data, onClick, styles }) {
             {data.title}
         </Button>
     )
+}
+
+MenuItem.propTypes = {
+    data: PropTypes.object.isRequired,
+    onClick: PropTypes.func.isRequired,
+    styles: PropTypes.object
 }
 
 export default MenuItem

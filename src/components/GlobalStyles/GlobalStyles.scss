@@ -70,6 +70,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+    overflow-y: overlay;
 }
 
 button,
@@ -81,7 +82,7 @@ input,
     font-family: 'ProximaNova', sans-serif;
 }
 
-a[href] {
+a {
     color: var(--text-color);
     text-decoration: none;
 }

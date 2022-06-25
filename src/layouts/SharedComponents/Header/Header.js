@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import classNames from 'classnames/bind'
 import Tooltip from '@tippyjs/react'
 
+import { ROUTES_CONFIG } from '~/config'
 import {
     CoinIcon,
     HelpIcon,
@@ -16,13 +17,14 @@ import {
     UserIcon
 } from '~/components/Icons'
 import PopperMenu from '~/components/Popper/PopperMenu'
-import SearchBox from '~/components/Layouts/SharedComponents/SearchBox'
+import SearchBox from '~/layouts/SharedComponents/SearchBox'
 import Image from '~/components/Image'
 import Button from '~/components/Button'
 import styles from './Header.module.scss'
 import IMAGES from '~/assets/images'
 
 const cx = classNames.bind(styles)
+
 const MENU_ITEMS = [
     {
         icon: LanguageIcon,
@@ -101,13 +103,13 @@ const USER_MENU = [
 function Header() {
     function handleChange(item) {}
 
-    let isUserLoggedIn = true
+    let isUserLoggedIn = false
 
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
                 {/* Logo */}
-                <Link to="/">
+                <Link to={ROUTES_CONFIG.home}>
                     <img src={IMAGES.logo} alt="Tiktok Logo" className={cx('logo')} />
                 </Link>
 
@@ -137,11 +139,7 @@ function Header() {
                     )}
                     <PopperMenu items={isUserLoggedIn ? USER_MENU : MENU_ITEMS} onChange={handleChange}>
                         {isUserLoggedIn ? (
-                            <Image
-                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tiktok-obj/1692568374729730.jpeg?x-expires=1655978400&x-signature=mzVC260huQOIPE4wigfgA%2FaZoao%3"
-                                alt=""
-                                className={cx('current-user-avt')}
-                            />
+                            <Image src="" alt="" className={cx('current-user-avt')} />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <MoreIcon />
